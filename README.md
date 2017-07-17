@@ -1,22 +1,56 @@
 # GryphonBot
-## Getting started
-Download this git *duh*
-Put all your settings and tokens into the `config-example.json` and rename that file to `example.JSON`
-Install all dependencies with `npm i` and start it with node!
-You should be all set.
 
-## About
-This bot provides commands and tools for Discord text channels and guilds.\n
-It is written in NodeJS.\n
-I started this project so I can learn NodeJS.\n
+Aka "Project GryphonBot". This bot provides commands and tools for Discord text channels and guilds. It is written in NodeJS.
 
-## My goal
-My goal is to try to create a bot that while having fun commands still provides great tools for admins.\n
+## Getting Started
 
-## Found a bug or want to request a new feature?
-Create an issue on this Git with appropriate label.\n
+Want to host this bot yourself? Ok this instructions will guide you throu the installation process.
 
-## Want to help?
-Simply ask me! I mostly check my email.\n
+### What do i need?
 
-This README is still WIP
+You need:
+
+```
+Current version of NodeJS (Not LTS!!)
+```
+
+### Installing
+
+
+First donwload this git.
+
+Then install all the dependencies we need so open cmd or terminal in the folder where the `bot.js` is located and run
+
+```
+npm i
+```
+
+After thats done open the `config-example.json` and your tokens and settings in there and rename it to `config.json`
+
+And **RUN**
+
+```
+node bot.js
+```
+If everything goes well the cmd/console should output something like this
+```
+Gryphon#5762 is up in 152 guilds, for 6930 users!
+Flight started at Mon Jul 17 2017 19:58:06 GMT+0200 (Central Europe Daylight Time)
+Using Gbot by Pesky12!
+```
+
+If you get this output and bot answers to {prefix}help you are all set!
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/Pesky12/GryphonNest/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## License
+
+This project is licensed under the Apache-2.0 License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Thanks to all those guys that make tutorials for Discord.js bots!
+* I mostly do this bot for fun and learning purposes.
+* Thanks for reading this [README.md](License.md)!
