@@ -4,28 +4,28 @@ Aka "Project GryphonBot". This bot provides commands and tools for Discord text 
 
 ## Getting Started
 
-Want to host this bot yourself? Ok this instructions will guide you throu the installation process.
+Want to host this bot yourself? Ok, this instructions will guide you through the installation process.
 
-### What do i need?
+### What do I need?
 
 You need:
 
 ```
-Current version of NodeJS (Not LTS!!)
+The current version of NodeJS (Not LTS!!)
 ```
 
 ### Installing
 
 
-First donwload this git.
+First, donwload this git.
 
-Then install all the dependencies we need so open cmd or terminal in the folder where the `bot.js` is located and run
+Then install all the dependencies we need so, open cmd or terminal in the folder where the `bot.js` is located and run
 
 ```
 npm i
 ```
 
-After thats done open the `config-example.json` and your tokens and settings in there and rename it to `config.json`
+After that's done open the `config-example.json` and your tokens and settings in there and rename it to `config.json`
 
 And **RUN**
 
@@ -49,7 +49,6 @@ Please read [CONTRIBUTING.md](https://github.com/Pesky12/GryphonNest/blob/master
 
 This project is licensed under the Apache-2.0 License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
 * Thanks to all those guys that make tutorials for Discord.js bots!
 * I mostly do this bot for fun and learning purposes.
