@@ -1,9 +1,9 @@
 # GryphonBot
 ## Getting started
-Download this git *duh*\n
-Put all your settings and tokens into the `config-example.json` and rename that file to `example.JSON`\n
-Install all dependencies with `npm i` and start it with node!\n
-You should be all set.\n
+Download this git *duh*
+Put all your settings and tokens into the `config-example.json` and rename that file to `example.JSON`
+Install all dependencies with `npm i` and start it with node!
+You should be all set.
 
 ## About
 This bot provides commands and tools for Discord text channels and guilds.\n
