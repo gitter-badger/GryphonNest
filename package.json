@@ -6,7 +6,7 @@
   "author": "Aleš Olesov",
   "license": "MIT",
   "scripts": {
-    "test": "npm run ci-build"
+    "test": "node ."
   },
   "dependencies": {
     "MALjs": "^0.1.0",
