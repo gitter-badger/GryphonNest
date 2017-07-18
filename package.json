@@ -1,0 +1,24 @@
+{
+  "name": "gryphonbot",
+  "version": "3.0.0",
+  "description": "Chatbot for discord",
+  "main": "app.js",
+  "scripts": {
+    "test": "ping"
+  },
+  "author": "Aleš Olesov",
+  "license": "MIT",
+  "dependencies": {
+    "MALjs": "^0.1.0",
+    "aniscrape": "^0.1.1",
+    "aniscrape-kissanime": "^0.1.0",
+    "booru": "^0.3.3",
+    "cleverbot-node": "^0.3.11",
+    "cleverbot.io": "^1.0.4",
+    "discord.js": "^11.1.0",
+    "he": "^1.1.1",
+    "jimp": "^0.2.28",
+    "random-natural": "^1.0.3",
+    "sfwbooru": "0.0.2"
+  }
+}
