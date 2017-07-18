@@ -29,7 +29,7 @@ fs.readdir("./commands/", (err, files) =>{
 
 client.on('ready', () => {
   console.log(`${client.user.tag} is up in ${client.guilds.size} guilds, for ${client.users.size} users!\nFlight started at${new Date()}\nUsing Gbot by Pesky12!`)
-  client.user.setGame(`use ${prefix} | Serving in: ${client.guilds.size} guilds! | pesky12.github.io/GryphonNest For source code and more info!`)
+  client.user.setGame(`use ${prefix}help | Serving in: ${client.guilds.size} guilds! | pesky12.github.io/GryphonNest For source code and more info!`)
   let embed = new Discord.RichEmbed()
       .setTitle('I have been restarted')
       .setColor('#ff7700')
