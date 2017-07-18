@@ -7,8 +7,6 @@ const prefix = config.prefix;
 // require("./Utils/onMessage")
 // require("./commands/Music/music")
 
-client.login(config.token);
-
 client.commands = new Discord.Collection
 
 
@@ -226,85 +224,5 @@ let responseObject = {
     'Steam Punk Giraffe': 'Thats my jam!',
     'steam punk giraffe': 'Thats my jam!',
 }
-client.on('ready', () => {
-    console.log(`${client.user.tag} is up in ${client.guilds.size} guilds, for ${client.users.size} users!\nFlight started at${new Date()}\nUsing Gbot by Pesky12!`)
-    client.user.setGame(`BOT WILL BE RIGHT BACK! | Serving in: ${client.guilds.size} guilds! | pesky12.github.io/GryphonNest For source code and more info!`)
-    client.user.setStatus('dnd')
-})
-
-client.on('message', message => {
-  if(message.content.startsWith('g@ping')){
-    var embed = new Discord.RichEmbed()
-    .setAuthor('Server Stats', client.user.avatarURL)
-    .setDescription('This is all info i can get so some values might not be displayed Or displayed incorectly!')
-    .setColor('#42b9f4')
-    message.channel.send({embed})
-    const si = require('systeminformation');
-    si.cpu(function(data) {
-      var embed = new Discord.RichEmbed()
-        .setAuthor('CPU')
-        .setColor('#41f4cd')
-        .setThumbnail('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Icons8_flat_electronics.svg/2000px-Icons8_flat_electronics.svg.png')
-        .addField('Vendor', `${data.vendor}`, true)
-        .addField('Brand', `${data.brand}`, true)
-        .addField('Cores', `${data.cores}`,true)
-        .addField('Min clock', `${data.speedmin}Ghz`, true)
-        .addField('Max clock', `${data.speedmax}Ghz`, true)
-        message.channel.send({embed})
-    })
-    si.cpuTemperature(data =>{
-      var embed = new Discord.RichEmbed()
-      .setAuthor('Temp')
-      .setColor('#41f4cd')
-        .addField('Current Temp', data.main)
-    })
-    si.mem(data =>{
-      var embed = new Discord.RichEmbed()
-        .setAuthor('Memory')
-        .setColor('#41f4cd')
-        .setThumbnail('https://cdn1.iconfinder.com/data/icons/network-devices/64/ram-card-256.png')
-        .addField('Total', `${data.Total} b`, true)
-        .addField('Free', `${data.free} b`, true)
-        .addField('Used', `${data.used} b`,true)
-        message.channel.send({embed})
-    })
-      var embed = new Discord.RichEmbed()
-      .setAuthor('Bot stats')
-      .setColor('#41f4cd')
-      .addField('Uptime', `ehm`, true)
-      .addField('Serving in', `${client.guilds.size} Guilds`, true)
-      .addField('Serving for', `${client.users.size} Users`, true)
-      .setThumbnail(client.user.avatarURL)
-    message.channel.send({embed})
-
-
-  }
-  if(message.content.startsWith('g@kot')){
-    var randomCat = require('random-cat');
-    var img = randomCat.get();
-    message.channel.send(url)
-    if(message.guild.channels.find("name", "mod-log")){
-          message.guild.channels.find("name", "mod-log").send('KOT')
-    }
-  }
-    if(message.content.startsWith('g@kat')){
-      var randomCat = require('random-cat');
-      const catFacts = require('cat-facts');
-      var img = randomCat.get();
-      let fact = catFacts.random();
-
-      let embed = new Discord.RichEmbed()
-                      .setTitle('Cat fact and picture.')
-                      .setImage(img)
-                      .setColor('#ba881b')
-                      .setDescription(fact)
-                      .setTimestamp(new Date())
-                      .setFooter('Meow', client.user.avatarURL)
-            message.channel.send({embed})
-
-  }
-})
-
-
 
 client.login(config.token);
