@@ -10,6 +10,7 @@
     "aniscrape": "^0.1.1",
     "aniscrape-kissanime": "^0.1.0",
     "booru": "^0.3.3",
+    "ci-build": "0.0.7",
     "cleverbot-node": "^0.3.11",
     "cleverbot.io": "^1.0.4",
     "discord.js": "^11.1.0",

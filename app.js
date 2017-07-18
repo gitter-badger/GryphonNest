@@ -7,8 +7,6 @@ const prefix = config.prefix;
 // require("./Utils/onMessage")
 // require("./commands/Music/music")
 
-client.login(config.token);
-
 client.commands = new Discord.Collection
 
 
@@ -29,10 +27,9 @@ fs.readdir("./commands/", (err, files) =>{
     })
 })
 
-
 client.on('ready', () => {
-  console.log(`${client.user.username} is online and ready Master Gryphon!\n${new Date()}`);
-  client.user.setGame(`${prefix}help`)
+  console.log(`${client.user.tag} is up in ${client.guilds.size} guilds, for ${client.users.size} users!\nFlight started at${new Date()}\nUsing Gbot by Pesky12!`)
+  client.user.setGame(`use ${prefix} | Serving in: ${client.guilds.size} guilds! | pesky12.github.io/GryphonNest For source code and more info!`)
   let embed = new Discord.RichEmbed()
       .setTitle('I have been restarted')
       .setColor('#ff7700')
@@ -102,7 +99,7 @@ client.on('message', message => {
     if (responseObject[message.content]) {
         message.channel.send(responseObject[message.content]);
     }
-    
+
    if (message.content.startsWith('Where is my son?')) {
         if (message.author.id == config.ownerID) {
             message.channel.send("Here mate")
@@ -178,7 +175,7 @@ client.on('message', message => {
         //         });
 
         //     };
-        // };        
+        // };
     });
 
 let responseObject = {
@@ -227,3 +224,5 @@ let responseObject = {
     'Steam Punk Giraffe': 'Thats my jam!',
     'steam punk giraffe': 'Thats my jam!',
 }
+
+client.login(config.token);
