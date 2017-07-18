@@ -5,6 +5,9 @@
   "main": "app.js",
   "author": "Aleš Olesov",
   "license": "MIT",
+  "scripts":{
+    "test": "npm ."
+  },
   "dependencies": {
     "MALjs": "^0.1.0",
     "aniscrape": "^0.1.1",
