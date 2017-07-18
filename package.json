@@ -3,9 +3,6 @@
   "version": "3.0.0",
   "description": "Chatbot for discord",
   "main": "app.js",
-  "scripts": {
-    "test": "ping"
-  },
   "author": "Aleš Olesov",
   "license": "MIT",
   "dependencies": {
