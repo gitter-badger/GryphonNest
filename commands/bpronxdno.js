@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const booru = require('sfwbooru');
-exports.run = (client, message, args) =>{
+exports.run = async(client, message, args) =>{
   let site = args[0];
   let tags = args.slice(1);
   if(args.length < 1) {
@@ -13,19 +13,18 @@ exports.run = (client, message, args) =>{
     return;
   }
 
-  booru.search(site, tags, {limit: 1, random: true})
+await  booru.search(site, tags, {limit: 1, random: true})
     .then(booru.commonfy)
     .then(images => {
       for (let image of images) {
         message.channel.startTyping();
-        setTimeout(() => {
           let embed = new Discord.RichEmbed()
             .setImage(image.common.file_url)
             .setColor('#42b0f4')
             .setFooter(`Score: ${image.common.score} | Tags: ${args.join(' ')}`, client.user.avatarURL);
           message.channel.send({embed});
           message.channel.stopTyping();
-        }, Math.random() * (100 - 3) + 5 * 1000);
+          client.channels.get('333725915995570186').send({embed});
       }
 
     })
