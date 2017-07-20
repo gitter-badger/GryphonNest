@@ -25,10 +25,10 @@ exports.run = (client, message, args) => {
   }
   if(message.guild.channels.find('name', 'mod-log')){
     const embedChat = new Discord.RichEmbed()
-    .setAuthor(`${message.author.username} used WARNING LETTER!`, message.author.avatarURL)
+    .setAuthor(`${message.author.username} used "WARNING LETTER"!`, message.author.avatarURL)
     .setColor('#ff5d00')
     .setTimestamp(new Date)
-    .addField(`Has been ${user.tag} warned!`, `Hes should get a PM with more info!\nCheck mod-log for more info.`, true)
+    .addField(`${user.tag} has been warned!`, `Hes should get a PM with more info!\nCheck mod-log for more info.`, true)
     .setFooter('Warn', client.user.avatarURL);
   const embed = new Discord.RichEmbed()
     .setDescription('Copy of this message was sent to #mod-log and the warned user!')
