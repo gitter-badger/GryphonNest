@@ -1,4 +1,5 @@
 # GryphonBot
+PLEASE MIND THAT THIS BOT WAS MADE FOR MY PERSONAL USE EDITING THIS CODE TO YOUR LIKING IS RECOMNDED
 
 Aka "Project GryphonBot". This bot provides commands and tools for Discord text channels and guilds. It is written in NodeJS.
 
