@@ -23,6 +23,7 @@ exports.run = (client, message, args) => {
     message.channel.send({embed});
     return;
   }
+  message.delete()
   if(message.guild.channels.find('name', 'mod-log')){
     const embedChat = new Discord.RichEmbed()
     .setAuthor(`${message.author.username} used "WARNING LETTER"!`, message.author.avatarURL)
@@ -78,7 +79,6 @@ message.channel.send({embed});
 client.users.get(user.id).send({embed: embedUser});
 message.guild.owner.send({embed});
 }
-message.delete()
 };
 
 exports.help = {

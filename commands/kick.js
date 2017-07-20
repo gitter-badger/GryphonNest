@@ -37,7 +37,7 @@ exports.run = (client, message, args) => {
     return;
   }
   message.guild.member(user).kick();
-
+message.delete()
 if(message.guild.channels.find('name', 'mod-log')){
   const embedBanned = new Discord.RichEmbed()
     .setAuthor(message.author.username, message.author.avatarURL)
@@ -96,7 +96,6 @@ if(message.guild.channels.find('name', 'mod-log')){
   message.guild.owner.send({embed});
   return;
 }
-message.delete()
 };
 
 exports.help = {
