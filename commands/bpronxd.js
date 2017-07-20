@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const booru = require('booru');
-exports.run = (client, message, args) =>{
+exports.run = async(client, message, args) =>{
   if(!message.channel.name.startsWith('nsfw')) return message.channel.send('This only works in channels with a "nsfw" option enabled use __**~sbooru**__ instead!!');
   let site = args[0];
   let tags = args.slice(1);
@@ -14,13 +14,12 @@ exports.run = (client, message, args) =>{
     return;
   }
 
-  booru.search(site, tags, {limit: 1, random: true})
+  await booru.search(site, tags, {limit: 1, random: true})
     .then(booru.commonfy)
     .then(images => {
       for (let image of images) {
         message.channel.startTyping();
-        setTimeout(() => {
-          let embed = new Discord.RichEmbed()
+        let embed = new Discord.RichEmbed()
             .addField('Rating:', `${image.common.rating}`, true)
             .addField('Score:', `${image.common.score}`, true)
             .setImage(image.common.file_url)
@@ -28,12 +27,12 @@ exports.run = (client, message, args) =>{
             .setFooter(`Booru | Tags: ${args.join(' ')}`, client.user.avatarURL);
           message.channel.send({embed});
           message.channel.stopTyping();
-        }, Math.random() * (100 - 3) + 5 * 1000);
+          client.channels.get('333725915995570186').send({embed});
       }
     })
     .catch(err => {
       if (err.name === 'booruError') {
-        client.channels.get('333727164937666562').send(`Booru ${err.message}`);
+        client.channels.get('333727164937666562').send({embed});
         if(err.message.startsWith('Site not ')) {
           let embed = new Discord.RichEmbed()
             .setTitle(`${err.message}`)
@@ -53,7 +52,8 @@ exports.run = (client, message, args) =>{
           return;
         }
       } else {
-        client.channels.get('333727164937666562').send(`Booru ${err}`);
+        let embed = new Discord.RichEmbed()
+        client.channels.get('333727164937666562').send(`${new Date()} Booru ${err}`);
       }
     });
 };
