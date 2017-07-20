@@ -39,7 +39,7 @@ exports.run = async (client, message, args) => {
     return;
   }
   message.guild.ban(userToBan, reason);
-  
+
 if(message.guild.channels.find('name', 'mod-log')){
   const embedBanned = new Discord.RichEmbed()
     .setAuthor(message.author.username, message.author.avatarURL)
@@ -96,6 +96,7 @@ if(message.guild.channels.find('name', 'mod-log')){
   client.users.get(userToBan.id).send({embed: embedBanned});
   message.guild.owner.send({embed});
 }
+message.delete
 };
 exports.help = {
   name: 'ban',

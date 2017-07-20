@@ -96,6 +96,7 @@ if(message.guild.channels.find('name', 'mod-log')){
   message.guild.owner.send({embed});
   return;
 }
+message.delete()
 };
 
 exports.help = {

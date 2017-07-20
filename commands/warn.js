@@ -77,8 +77,8 @@ const embed = new Discord.RichEmbed()
 message.channel.send({embed});
 client.users.get(user.id).send({embed: embedUser});
 message.guild.owner.send({embed});
-
 }
+message.delete()
 };
 
 exports.help = {
