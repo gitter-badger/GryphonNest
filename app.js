@@ -81,7 +81,7 @@ client.on('roleCreate', (role) => {
 })
 
 client.on('guildBanAdd', (guild, user) => {
-  if (role.guild.channels.find('name', 'mod-log')) {
+  if (guild.channels.find('name', 'mod-log')) {
     let embed = new Discord.RichEmbed()
       .setAuthor(`${user.name} has been banned!`)
       .setDescription(`For more info check the audit log`)
