@@ -3,7 +3,7 @@ exports.run = (client, message, params) => {
   if (!params[0]) {
     const commandNames = Array.from(client.commands.keys());
     const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
-    message.channel.send(`<List of commands for GryphonBot>\n\n{Use ${settings.prefix}help <command> for more info!}\n\n${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`, {code:'asciidoc'});
+    message.channel.send(`<List of commands for Gbot>\n\n{Use ${settings.prefix}help <command> for more info!}\n\n${client.commands.map(c => `${settings.prefix}${c.help.name}${' '.repeat(longest - c.help.name.length)} :: ${c.help.description}`).join('\n')}`, {code:'asciidoc'});
   } else {
     let command = params[0];
     if (client.commands.has(command)) {
