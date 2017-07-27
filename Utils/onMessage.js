@@ -1,89 +1,95 @@
+const Discord = require('discord.js');
+const config = require('../config.json');
+const prefix = config.prefix;
 
-client.on('message', message => {
 
-        if (responseObject[message.content]) {
-        message.channel.send(responseObject[message.content]);
-        }
+module.exports = (client) =>{
+  client.on('message', message => {
 
-   if (message.content.startsWith('Where is my son?')) {
-        if (message.author.id == config.ownerID) {
-            message.channel.send("Here mate")
-            console.log("Here mate")
-        } else {
-            message.channel.send("I dont know where he is")
-            console.log("Where is my son?")
-        }
+    if (responseObject[message.content]) {
+      message.channel.send(responseObject[message.content]);
+    }
+
+    if (message.content.startsWith('Where is my son?')) {
+      if (message.author.id == config.ownerID) {
+        message.channel.send('Here mate');
+        console.log('Here mate');
+      } else {
+        message.channel.send('I dont know where he is');
+        console.log('Where is my son?');
+      }
 
     }
 
-        if (message.author.bot) return;
-        if (message.content.startsWith('lmao')) {
-            if (message.channel.id == '316291869170728971') {
-                message.channel.send('this is a testing channel no LMAOs Counted')
-            } else {
-                sql.get(`SELECT * FROM scores`).then(row => {
-                    if (!row) {
-                        sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
-                        client.user.setGame(`Strange LMAO: ${row.points}`)
-                    } else {
-                        let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
-                        sql.run(`UPDATE scores SET points = ${row.points + 1}`);
-                    }
-                    client.user.setGame(`Strange LMAO: ${row.points}`)
-                }).catch(() => {
-                    console.error;
-                    sql.run('CREATE TABLE IF NOT EXISTS scores (points INTEGER)').then(() => {
-                        sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
-                    });
-                });
-            };
-        };
-        if (message.content.startsWith('LMAO')) {
-            if (message.channel.id == '316291869170728971') {
-                message.channel.send('this is a testing channel no LMAOs Counted')
-            } else {
-                sql.get(`SELECT * FROM scores`).then(row => {
-                    if (!row) {
-                        sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
-                        client.user.setGame(`Strange LMAO: ${row.points}`)
-                    } else {
-                        let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
-                        sql.run(`UPDATE scores SET points = ${row.points + 1}`);
-                    }
-                    client.user.setGame(`Strange LMAO: ${row.points}`)
-                }).catch(() => {
-                    console.error;
-                    sql.run('CREATE TABLE IF NOT EXISTS scores (points INTEGER)').then(() => {
-                        sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
-                    });
-                });
-            };
-        };
-        if (message.content.startsWith('Lmao')) {
-            if (message.channel.id == '316291869170728971') {
-                message.channel.send('this is a testing channel no LMAOs Counted')
-            } else {
-                sql.get(`SELECT * FROM scores`).then(row => {
-                    if (!row) {
-                        sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
-                        client.user.setGame(`Strange LMAO: ${row.points}`)
-                    } else {
-                        let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
-                        sql.run(`UPDATE scores SET points = ${row.points + 1}`);
-                    }
-                    client.user.setGame(`Strange LMAO: ${row.points}`)
-                }).catch(() => {
-                    console.error;
-                    sql.run('CREATE TABLE IF NOT EXISTS scores (points INTEGER)').then(() => {
-                        sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
-                    });
-                });
+    // I  A M  G R Y P H O N
+    // if (message.author.bot) return;
+    // if (message.content.startsWith('lmao')) {
+    //     if (message.channel.id == '316291869170728971') {
+    //         message.channel.send('this is a testing channel no LMAOs Counted')
+    //     } else {
+    //         sql.get(`SELECT * FROM scores`).then(row => {
+    //             if (!row) {
+    //                 sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
+    //                 client.user.setGame(`Strange LMAO: ${row.points}`)
+    //             } else {
+    //                 let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
+    //                 sql.run(`UPDATE scores SET points = ${row.points + 1}`);
+    //             }
+    //             client.user.setGame(`Strange LMAO: ${row.points}`)
+    //         }).catch(() => {
+    //             console.error;
+    //             sql.run('CREATE TABLE IF NOT EXISTS scores (points INTEGER)').then(() => {
+    //                 sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
+    //             });
+    //         });
+    //     };
+    // };
+    // if (message.content.startsWith('LMAO')) {
+    //     if (message.channel.id == '316291869170728971') {
+    //         message.channel.send('this is a testing channel no LMAOs Counted')
+    //     } else {
+    //         sql.get(`SELECT * FROM scores`).then(row => {
+    //             if (!row) {
+    //                 sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
+    //                 client.user.setGame(`Strange LMAO: ${row.points}`)
+    //             } else {
+    //                 let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
+    //                 sql.run(`UPDATE scores SET points = ${row.points + 1}`);
+    //             }
+    //             client.user.setGame(`Strange LMAO: ${row.points}`)
+    //         }).catch(() => {
+    //             console.error;
+    //             sql.run('CREATE TABLE IF NOT EXISTS scores (points INTEGER)').then(() => {
+    //                 sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
+    //             });
+    //         });
+    //     };
+    // };
+    // if (message.content.startsWith('Lmao')) {
+    //     if (message.channel.id == '316291869170728971') {
+    //         message.channel.send('this is a testing channel no LMAOs Counted')
+    //     } else {
+    //         sql.get(`SELECT * FROM scores`).then(row => {
+    //             if (!row) {
+    //                 sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
+    //                 client.user.setGame(`Strange LMAO: ${row.points}`)
+    //             } else {
+    //                 let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
+    //                 sql.run(`UPDATE scores SET points = ${row.points + 1}`);
+    //             }
+    //             client.user.setGame(`Strange LMAO: ${row.points}`)
+    //         }).catch(() => {
+    //             console.error;
+    //             sql.run('CREATE TABLE IF NOT EXISTS scores (points INTEGER)').then(() => {
+    //                 sql.run('INSERT INTO scores (points) VALUES (?)', [1]);
+    //             });
+    //         });
 
-            };
-        };        
-    });
+    //     };
+    // };
+  });
 
-let responseObject = {
+  let responseObject = {
     'ayy': 'Ayy, lmao!',
 
     'Help': 'There is no help',
@@ -128,5 +134,5 @@ let responseObject = {
 
     'Steam Punk Giraffe': 'Thats my jam!',
     'steam punk giraffe': 'Thats my jam!',
-}
-}
+  };
+};

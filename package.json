@@ -14,9 +14,13 @@
     "cleverbot-node": "^0.3.11",
     "cleverbot.io": "^1.0.4",
     "discord.js": "^11.1.0",
+    "ffmpeg-binaries": "3.2.2-3",
     "he": "^1.1.1",
     "jimp": "^0.2.28",
+    "opusscript": "0.0.3",
     "random-natural": "^1.0.3",
-    "sfwbooru": "0.0.2"
+    "sfwbooru": "0.0.2",
+    "youtube-dl": "^1.11.1",
+    "ytdl": "^0.6.0"
   }
 }
