@@ -6,11 +6,11 @@ exports.run = (client, message, args) =>{
     .addField('Uptime', `${process.uptime()} Seconds`,true)
     .addField('Code Author', client.users.get('235047463017381888').tag, true)
     .setColor('#7f16ff')
-    .setThumbnail(client.user.avatarURL)
-  message.channel.send({embed})
-  message.channel.send('https://github.com/Pesky12/GryphonNest')
+    .setThumbnail(client.user.avatarURL);
+  message.channel.send({embed});
+  message.channel.send('https://github.com/Pesky12/GryphonNest');
 };
-235047463017381888
+235047463017381888;
 exports.help = {
   name: 'info',
   description: '🔧 Shows info about the bot with links!',
