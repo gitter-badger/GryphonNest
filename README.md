@@ -1,4 +1,6 @@
 # GryphonBot
+
+[![Join the chat at https://gitter.im/GryphonNest/Lobby](https://badges.gitter.im/GryphonNest/Lobby.svg)](https://gitter.im/GryphonNest/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 PLEASE MIND THAT THIS BOT WAS MADE FOR MY PERSONAL USE EDITING THIS CODE TO YOUR LIKING IS RECOMNDED
 
 Aka "Project GryphonBot". This bot provides commands and tools for Discord text channels and guilds. It is written in NodeJS.
